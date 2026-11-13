@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!-- Tells the browser: "this is a modern HTML document." Always the first line. -->
+
+<html lang="en">
+<!-- The <html> element wraps everything. lang="en" says the page is in English,
+     which helps screen readers pronounce words correctly and helps search engines. -->
+
+  <head>
+    <!-- The <head> holds information ABOUT the page. Nothing in here shows up
+         on the page itself. -->
+
+    <meta charset="UTF-8">
+    <!-- Character encoding: lets the page show any letter or symbol correctly
+         (é, ö, emoji, and so on). -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Makes the page fit phone screens properly instead of showing a tiny
+         zoomed-out desktop version. -->
+
+    <title>Cindy | Portfolio</title>
+    <!-- The text shown in the browser tab and in search results. -->
+
+    <meta name="description" content="Cindy: product management, digital health, and human-centered digital products.">
+    <!-- A short summary that search engines may show under your link. -->
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Loads the CSS file. href="style.css" means "a file called style.css
+         in the same folder as this page." -->
+  </head>
+
+  <body>
+    <!-- The <body> holds everything visible on the page. -->
+
+    <header>
+      <!-- <header> marks the introductory part of the page. -->
+
+      <h1>Hej hej! Välkommen!</h1>
+      <!-- <h1> is the main heading. Use exactly one per page: it says what
+           the page is about. -->
+
+      <p></p>
+      <!-- <p> is a paragraph. This one is your one-line intro. -->
+    </header>
+
+    <main>
+      <!-- <main> holds the main content of the page. Only one per page. -->
+
+      <section>
+        <!-- A <section> groups related content, usually with its own heading. -->
+
+        <h2>About me</h2>
+        <!-- <h2> is a subheading, one level below <h1>. Headings go
+             h1 → h2 → h3 like an outline. Don't skip levels. -->
+
+        <p>
+          Hej, Jag är Cindy. Jag kommer frän Indonesien, och Jag studirerade Information Systems i Lund University.
+          My experience revolves around product management, digital health,
+          and human-centered digital products. In my spare time, I love reading
+          books. I'm currently reading <cite>Intermezzo</cite> by Sally Rooney,
+          and <cite>The Virgin Suicides</cite> in between. I am an amateur movie
+          critic, I love good food, and I love spending time with my friends!
+        </p>
+        <!-- <cite> marks the title of a creative work (a book, film, show).
+             Browsers show it in italics by default. -->
+
+        <p>Notable mention: a massive <cite>The Office</cite> (US) fan!</p>
+      </section>
+
+      <section>
+        <h2>Get in touch</h2>
+
+        <ul>
+          <!-- <ul> is an "unordered list" (bullet points). Each <li> is
+               one list item. -->
+
+          <li>
+            <a href="https://www.linkedin.com/in/cindyfransiska" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <!-- <a> is a link ("anchor").
+                 href   = where the link goes.
+                 target="_blank" = open in a new tab.
+                 rel="noopener noreferrer" = a safety setting that goes with
+                 target="_blank" and stops the new tab from controlling yours. -->
+          </li>
+
+          <li>
+            <a href="mailto:contact.cindyfransiska@gmail.com">contact.cindyfransiska@gmail.com</a>
+            <!-- A link that starts with "mailto:" opens the visitor's email
+                 app with your address already filled in. -->
+          </li>
+        </ul>
+      </section>
+    </main>
+
+  </body>
+</html>

@@ -1,0 +1,139 @@
+/* ==========================================================
+   style.css: the look of the site.
+   CSS comments look like this. The browser ignores them.
+   ========================================================== */
+
+
+/* ---------- 1. Variables (custom properties) ----------
+   ":root" means "the whole page". Values defined here can be
+   reused anywhere with var(--name). Change a color once here
+   and it updates everywhere it's used. */
+:root {
+  --text: #1f2328;        /* main text: near-black, softer than pure #000 */
+  --muted: #59636e;       /* secondary text, e.g. the intro line */
+  --background: #fdfcfa;  /* a warm off-white */
+  --accent: #b4462b;      /* link color: a terracotta red */
+  --line: #e4e1dc;        /* subtle divider lines */
+}
+
+
+/* ---------- 2. A small reset ----------
+   "*" selects every element. By default, width does NOT include
+   padding and border, which makes sizes confusing. "border-box"
+   makes width mean the whole box, which is far more intuitive. */
+* {
+  box-sizing: border-box;
+}
+
+
+/* ---------- 3. The page itself ---------- */
+body {
+  /* A "font stack": the browser uses the first font it has.
+     These are fonts already built into Mac, Windows, Android, etc.,
+     so nothing has to download, and each device gets a clean font. */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               Helvetica, Arial, sans-serif;
+
+  font-size: 1.125rem;   /* 18px: slightly bigger than default, easier to read */
+  line-height: 1.6;      /* space between lines: 1.6 × the font size.
+                            No unit = it scales with the text. */
+  color: var(--text);
+  background-color: var(--background);
+
+  /* ===== LAYOUT: limit the width and center the content ===== */
+  max-width: 65ch;       /* never wider than ~65 characters per line.
+                            Long lines are tiring: your eye loses its place
+                            jumping back to the start of the next line. */
+  margin: 0 auto;        /* two values = top/bottom, then left/right.
+                            "auto" on left and right splits the leftover space
+                            equally, which centers the box. */
+
+  /* Space inside the edges, so text never touches the screen edge
+     (very important on phones). Values: top/bottom, then left/right. */
+  padding: 3rem 1.25rem;
+}
+
+
+/* ---------- 4. Headings ---------- */
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.1;       /* big text needs tighter line spacing */
+  margin: 0 0 0.5rem;     /* top, left/right, bottom: only space below */
+  letter-spacing: -0.02em; /* pull letters slightly closer: looks crisper
+                              at large sizes. "em" = relative to this
+                              element's own font size. */
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin: 2.5rem 0 0.75rem;   /* more space above than below, so the heading
+                                 visually "belongs" to the text under it */
+}
+
+
+/* ---------- 5. Header area ----------
+   "header p" is a DESCENDANT selector: only <p> elements
+   inside <header>. Other paragraphs aren't affected. */
+header p {
+  font-size: 1.25rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+header {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--line);   /* thickness, style, color */
+}
+
+
+/* ---------- 6. Paragraphs and lists ---------- */
+p {
+  margin: 0 0 1rem;     /* consistent space between paragraphs */
+}
+
+ul {
+  padding-left: 1.25rem;  /* indent for the bullets */
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+
+/* ---------- 7. Links ---------- */
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;   /* move the underline a little below the text */
+}
+
+/* ":hover" is a PSEUDO-CLASS: a state, not an element.
+   This applies only while the mouse is over the link. */
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+/* ":focus-visible" = when someone reaches the link with the Tab key
+   (keyboard users). Always keep a visible focus style for accessibility. */
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+
+/* ---------- 8. RESPONSIVE DESIGN: media queries ----------
+   A media query says: "apply these rules ONLY IF a condition is true."
+   Here the condition is: "the screen is 600px wide or less" (phones).
+   Rules inside override the ones above, because CSS reads top to
+   bottom and later rules win when they target the same thing. */
+@media (max-width: 600px) {
+  body {
+    font-size: 1rem;        /* 16px on small screens */
+    padding: 2rem 1rem;     /* less empty space around the edges */
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
