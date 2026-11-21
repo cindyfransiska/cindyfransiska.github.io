@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!-- Tells the browser: "this is a modern HTML document." Always the first line. -->
+
+<html lang="en">
+<!-- The <html> element wraps everything. lang="en" says the page is in English,
+     which helps screen readers pronounce words correctly and helps search engines. -->
+
+  <head>
+    <!-- The <head> holds information ABOUT the page. Nothing in here shows up
+         on the page itself. -->
+
+    <meta charset="UTF-8">
+    <!-- Character encoding: lets the page show any letter or symbol correctly
+         (é, ö, emoji, and so on). -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Makes the page fit phone screens properly instead of showing a tiny
+         zoomed-out desktop version. -->
+
+    <title>Welcome to Sweden: Your First Steps</title>
+    <!-- The text shown in the browser tab and in search results. -->
+
+    <meta name="description" content="Cindy: product management, digital health, and human-centered digital products.">
+    <!-- A short summary that search engines may show under your link. -->
+
+    <link rel="stylesheet" href="../style.css">
+    <!-- Loads the CSS file. href="style.css" means "a file called style.css
+         in the same folder as this page." -->
+  </head>
+
+  <body>
+    <!-- The <body> holds everything visible on the page. -->
+
+    <header>
+      <!-- <header> marks the introductory part of the page. -->
+
+      <h1>So you have arrived in Sweden. Then what?</h1>
+      <!-- <h1> is the main heading. Use exactly one per page: it says what
+           the page is about. -->
+
+      <p>I know how that feels like. The anxieties building up. The confusion of what question to ask and who to ask. <br> Where do I start? <br>
+        Here you will find a friendly guide to help you settle in! :) </p>
+      <!-- <p> is a paragraph. This one is your one-line intro. -->
+    </header>
+
+    <main>
+      <!-- <main> holds the main content of the page. Only one per page. -->
+
+      <section>
+        <!-- A <section> groups related content, usually with its own heading. -->
+
+        <h2>About me</h2>
+        <!-- <h2> is a subheading, one level below <h1>. Headings go
+             h1 → h2 → h3 like an outline. Don't skip levels. -->
+
+        <p>
+          This is a simple step-by-step guide as you first stepped foot in Sweden. I came to Sweden to do my master and I still remember the feeling of anxiety. I have looked up some information before I came, but still.. only we know that feeling ;) </p>
+        <!-- <cite> marks the title of a creative work (a book, film, show).
+             Browsers show it in italics by default. -->
+
+        <p> <cite></cite></p>
+      </section>
+
+      <section>
+        <h2>Get in touch</h2>
+
+        <ul>
+          <!-- <ul> is an "unordered list" (bullet points). Each <li> is
+               one list item. -->
+
+          <li>
+            <a href="../index.html">←Back to home</a>
+            <!-- <a> is a link ("anchor").
+                 href   = where the link goes.
+                 target="_blank" = open in a new tab.
+                 rel="noopener noreferrer" = a safety setting that goes with
+                 target="_blank" and stops the new tab from controlling yours. -->
+          </li>
+
+          <li>
+            <a href="mailto:contact.cindyfransiska@gmail.com">Feel free to contact me through email!</a>
+            <!-- A link that starts with "mailto:" opens the visitor's email
+                 app with your address already filled in. -->
+          </li>
+        </ul>
+      </section>
+    </main>
+
+  </body>
+</html>
